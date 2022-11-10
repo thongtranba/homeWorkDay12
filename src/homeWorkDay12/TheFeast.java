@@ -2,7 +2,7 @@ package homeWorkDay12;
 
 public class TheFeast {
 	public static void main(String[] args) {
-		int result = feast(12, 4, 4);
+		int result = feast(10, 2, 5);
 		System.out.println("The Feast: " + result);
 
 	}
@@ -11,7 +11,7 @@ public class TheFeast {
 		int numOfChocolate = money / cost;
 		int wrapper = numOfChocolate;
 
-		while (wrapper >= numOfChocolate) {
+		while (wrapper >= exchange) {
 			numOfChocolate = numOfChocolate + 1;
 			wrapper = wrapper - exchange + 1;
 		}
