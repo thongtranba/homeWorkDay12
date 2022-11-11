@@ -12,13 +12,13 @@ public class MininumGap {
 		System.out.println("the mininum gap: " + result);
 	}
 
-	public static int minimumGap(List<Integer> arr) {
-		int size = Collections.max(arr);
-		List<Integer> pairs = new ArrayList<Integer>(Arrays.asList(new Integer[size + 1]));
-		List<Integer> minGaps = new ArrayList<Integer>();
+	public static int minimumGap(List<Integer> arr) { //time complexity => O(3n)
+		int size = Collections.max(arr); //n steps
+		List<Integer> pairs = new ArrayList<Integer>(Arrays.asList(new Integer[size + 1])); //1 step
+		List<Integer> minGaps = new ArrayList<Integer>(); //1 step
 		int currIndex = 0;
 		int prevIndex = 0;
-		for (int i = 0; i < arr.size(); i++) {
+		for (int i = 0; i < arr.size(); i++) { //n steps
 			if (pairs.contains(arr.get(i))) {
 				currIndex = i;
 				prevIndex = pairs.get(arr.get(i));
@@ -27,6 +27,6 @@ public class MininumGap {
 			}
 			pairs.set(arr.get(i), i);
 		}
-		return Collections.min(minGaps);
+		return Collections.min(minGaps); //n steps
 	}
 }
